@@ -1,0 +1,113 @@
+/* ─── Featured Article ───────────────────────────────────────────────────── */
+#journal-featured{background:var(--black)}
+.featured-post-inner{display:flex;gap:48px;align-items:stretch}
+@media(max-width:1023px){.featured-post-inner{flex-direction:column}}
+.featured-post-img-wrap{
+  flex:2;position:relative;border-radius:8px;overflow:hidden;min-height:520px
+}
+.featured-post-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.featured-post-img-wrap:hover img{transform:scale(1.04)}
+.featured-post-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,rgba(10,10,10,.9))}
+@media(max-width:1023px){.featured-post-img-overlay{background:linear-gradient(to top,rgba(10,10,10,.8),transparent)}}
+.featured-post-badge{
+  position:absolute;top:24px;left:24px;padding:5px 14px;
+  background:var(--gold);color:var(--black);font-size:.7rem;font-weight:700;letter-spacing:.12em;border-radius:999px
+}
+.featured-post-content{
+  flex:1;display:flex;flex-direction:column;justify-content:center;padding:8px 0
+}
+.featured-cat{color:var(--gold);font-size:.75rem;letter-spacing:.2em;margin-bottom:16px}
+.featured-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2rem);line-height:1.2;margin-bottom:16px;transition:color .3s}
+.featured-post-inner:hover .featured-title{color:var(--gold)}
+.featured-excerpt{color:#9ca3af;line-height:1.8;margin-bottom:28px}
+.featured-meta{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.featured-meta img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(212,175,55,.3)}
+.featured-author-name{font-size:.85rem;margin-bottom:2px}
+.featured-author-date{color:#6b7280;font-size:.75rem}
+.featured-read-time{display:flex;align-items:center;gap:6px;color:#6b7280;font-size:.8rem;margin-bottom:28px}
+.featured-read-time svg{width:14px;height:14px;stroke:#6b7280;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.read-article-btn{
+  display:inline-flex;align-items:center;gap:8px;color:var(--gold);
+  font-size:.82rem;letter-spacing:.08em;transition:gap .3s
+}
+.read-article-btn:hover{gap:14px}
+.read-article-btn svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ─── Blog Grid ──────────────────────────────────────────────────────────── */
+#journal-grid{background:#0d0d0d}
+.journal-header-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:16px}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+@media(max-width:1023px){.journal-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:767px){.journal-grid{grid-template-columns:1fr}}
+.journal-card{border-radius:8px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column}
+.journal-card-img{position:relative;height:224px;overflow:hidden}
+.journal-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.journal-card:hover .journal-card-img img{transform:scale(1.1)}
+.journal-card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65),transparent)}
+.journal-card-cat{position:absolute;top:16px;left:16px;padding:4px 12px;background:rgba(0,0,0,.8);backdrop-filter:blur(4px);color:var(--gold);font-size:.7rem;letter-spacing:.1em;border-radius:999px}
+.journal-card-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.journal-card-title{font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:10px;transition:color .3s;flex:1}
+.journal-card:hover .journal-card-title{color:var(--gold)}
+.journal-card-excerpt{color:#9ca3af;font-size:.82rem;margin-bottom:16px;overflow:hidden;-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical}
+.journal-card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid rgba(212,175,55,.1)}
+.journal-card-author{display:flex;align-items:center;gap:10px}
+.journal-card-author img{width:30px;height:30px;border-radius:50%;object-fit:cover}
+.journal-card-author-name{color:#6b7280;font-size:.75rem}
+.journal-card-time{display:flex;align-items:center;gap:4px;color:#6b7280;font-size:.75rem}
+.journal-card-time svg{width:12px;height:12px;stroke:#6b7280;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ─── Design Trends ──────────────────────────────────────────────────────── */
+#design-trends{background:var(--black)}
+.trends-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:767px){.trends-grid{grid-template-columns:1fr}}
+.trend-card{padding:40px 32px;border-radius:8px;position:relative;overflow:hidden;transition:border-color .4s,transform .4s}
+.trend-card:hover{transform:translateY(-6px)}
+.trend-num{font-family:'Playfair Display',serif;font-size:4rem;color:rgba(212,175,55,.1);position:absolute;top:16px;right:20px;line-height:1;font-weight:700;transition:color .4s}
+.trend-card:hover .trend-num{color:rgba(212,175,55,.18)}
+.trend-icon{width:48px;height:48px;margin-bottom:24px;stroke:var(--gold);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.trend-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:10px;transition:color .3s}
+.trend-card:hover h3{color:var(--gold)}
+.trend-card p{color:#9ca3af;font-size:.85rem;line-height:1.8}
+.trend-tag{display:inline-block;padding:4px 10px;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.2);color:var(--gold);font-size:.7rem;border-radius:4px;margin-top:16px}
+
+/* ─── Newsletter ─────────────────────────────────────────────────────────── */
+#journal-newsletter{background:linear-gradient(135deg,#0d0d0d,var(--charcoal))}
+.jnl-newsletter{max-width:640px;margin:0 auto;text-align:center}
+.jnl-newsletter h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:16px}
+.jnl-newsletter p{color:#9ca3af;margin-bottom:40px}
+.jnl-form{display:flex;gap:12px;max-width:480px;margin:0 auto;flex-wrap:wrap}
+.jnl-form input{
+  flex:1;min-width:200px;background:rgba(26,26,26,.8);border:1px solid #374151;border-radius:8px;
+  padding:14px 18px;color:var(--white);font-size:.9rem;outline:none;transition:border-color .3s
+}
+.jnl-form input:focus{border-color:var(--gold)}
+.jnl-form input::placeholder{color:#4b5563}
+
+/* ─── FAQ on Journal ─────────────────────────────────────────────────────── */
+#faq-section{background:var(--black)}
+.faq-list{display:flex;flex-direction:column;gap:16px;max-width:768px;margin:0 auto}
+details.faq-item{border:1px solid #1f2937;border-radius:8px;overflow:hidden}
+details.faq-item[open]{border-color:rgba(212,175,55,.25)}
+summary.faq-question{
+  width:100%;padding:20px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  text-align:left;background:transparent;
+  cursor:pointer;color:var(--white);font-weight:500;list-style:none;
+  transition:background .3s
+}
+summary.faq-question::-webkit-details-marker{display:none}
+summary.faq-question:hover{background:rgba(26,26,26,.5)}
+details.faq-item[open] summary.faq-question{color:var(--gold)}
+.faq-q-text{padding-right:32px}
+.faq-toggle-icon{
+  flex-shrink:0;width:32px;height:32px;border-radius:50%;
+  border:1px solid #374151;display:flex;align-items:center;justify-content:center;
+  transition:background .3s,border-color .3s
+}
+details.faq-item[open] .faq-toggle-icon{background:var(--gold);border-color:var(--gold)}
+.faq-toggle-icon svg{width:16px;height:16px;stroke:#9ca3af;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s}
+details.faq-item[open] .faq-toggle-icon svg{stroke:var(--black)}
+.faq-icon-minus{display:none}
+details.faq-item[open] .faq-icon-plus{display:none}
+details.faq-item[open] .faq-icon-minus{display:block}
+.faq-answer-body{padding:0 24px 20px;color:#9ca3af;line-height:1.8}
